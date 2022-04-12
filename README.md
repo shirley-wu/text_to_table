@@ -1,6 +1,6 @@
 ## Introduction
 
-This repository is for our ACL2020 paper: [Text-to-Table: A New Way of Information Extraction](https://arxiv.org/abs/2109.02707).
+This repository is for our ACL2022 paper: [Text-to-Table: A New Way of Information Extraction](https://arxiv.org/abs/2109.02707).
 
 ## Requirements
 
