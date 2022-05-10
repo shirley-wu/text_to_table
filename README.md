@@ -8,6 +8,8 @@ Training requires `fairseq==v0.10.2`, and evaluation requires `sacrebleu==v2.0.0
 
 Or you can directly install by `pip install -r requirements.txt`.
 
+Note: to avoid potential incompatibility, your fairseq version should be **exactly v0.10.2**, and your python version should be **<3.9**
+
 ## Dataset
 
 You can download the four datasets from [Google Drive](https://drive.google.com/file/d/1zTfDFCl1nf_giX7IniY5WbXi9tAuEHDn/view?usp=sharing).
