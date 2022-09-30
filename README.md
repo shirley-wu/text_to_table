@@ -12,7 +12,7 @@ Note: to avoid potential incompatibility, your fairseq version should be **exact
 
 ## Dataset
 
-You can download the four datasets from [Google Drive](https://drive.google.com/file/d/1zTfDFCl1nf_giX7IniY5WbXi9tAuEHDn/view?usp=sharing).
+You can download the four datasets from [Google Drive](https://drive.google.com/file/d/1zTfDFCl1nf_giX7IniY5WbXi9tAuEHDn/view?usp=sharing). If you are interested in preprocessing original table-to-text datasets into our text-to-table datasets, please check [data_preprocessing](data_preprocessing/).
 
 For preprocessing, we use `fairseq` for BPE and binarization. You need to first download a BART model [here](https://github.com/pytorch/fairseq/tree/main/examples/bart), and then use `scripts/preprocess.sh` to preprocess the data. The script has two arguments: the first is the data path and the second is the bart model path, e.g.,
 ```bash
