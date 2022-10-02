@@ -10,4 +10,4 @@ PYTHONPATH=.:../ python ./preprocess_wikibio/preprocess_wikibio.py raw/WikiInfo2
 
 # Note: after preprocessing, we also filter the test set to remove too long input documents.
 # To do so, first conduct BPE (L1-L24 in scripts/preprocess.sh), and then do filtering via
-# python ./preprocess_wikibio/filter_testset_by_input_tokens.py --inp preprocessed/wikibio/test.bpe.text --oup preprocessed/wikibio/test.bpe.text preprocessed/wikibio/test.bpe.filtered_data preprocessed/wikibio/test.text.detok preprocessed/wikibio/test.filtered_data
+# python ./preprocess_wikibio/filter_testset_by_input_tokens.py --inp preprocessed/wikibio/test.bpe.text --oup preprocessed/wikibio/test.bpe.text preprocessed/wikibio/test.bpe.data preprocessed/wikibio/test.text.detok preprocessed/wikibio/test.data
