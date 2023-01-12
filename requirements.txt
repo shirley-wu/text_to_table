@@ -1,3 +1,4 @@
 fairseq==v0.10.2
 sacrebleu==v2.0.0
 bert_score==v0.3.11
+transformers==v3.1.0
