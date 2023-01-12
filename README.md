@@ -1,3 +1,7 @@
+**Update 01/12/2023**: for BERTScore evaluation, using `transformers>4.17.0` will lead to different results as in the paper. If you have difficulty replicating the BERTScore results, please try downgrading to `transformers<4.17.0`. In my experiments I used `transformers==3.1.0`. For details please refer to https://github.com/shirley-wu/text_to_table/issues/7
+
+---
+
 ## Introduction
 
 This repository is for our ACL2022 paper: [Text-to-Table: A New Way of Information Extraction](https://arxiv.org/abs/2109.02707).
