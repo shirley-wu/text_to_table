@@ -26,12 +26,20 @@ then you'll have BPE-ed files under `data/rotowire` and binary files under `data
 
 ## Training
 
-For each dataset, use `scripts/dataset-name/train_vanilla.sh` to train a vanilla seq2seq model, and use `scripts/dataset-name/train_vanilla.sh` to train a HAD model. The training scripts have two arguments: the first is the data path (NOTE: it's not the path to the binary files) and the second is the bart model path, e.g.,
+For each dataset, use `scripts/dataset-name/train_vanilla.sh` to train a vanilla seq2seq model, and use `scripts/dataset-name/train_vanilla.sh` to train a HAD model. The training scripts have three arguments: the first is the data path (NOTE: it's not the path to the binary files), the second is the bart model path, and the third is the saving directory (optional argument, default is `checkpoints/`). Example use:
 ```bash
 bash scripts/rotowire/train_had.sh data/rotowire/ bart.base/
 ```
 
-Additionally, for Rotowire and WikiTableText, the datasets are very small, so we run experiments with 5 seeds (1, 10, 20, 30, 40) and report the average numbers. Scripts under `scripts/rotowire` and `scripts/wikitabletext` have the seed as the third argument.
+or
+
+```bash
+bash scripts/rotowire/train_had.sh data/rotowire/ bart.base/ checkpoints/rotowire/
+```
+
+**Note**: for simplicity, the saving directory for all scripts are set to `checkpoints/` by default. However, if you want to run training experiments, remember to change the saving directory argument. Otherwise the experiments may override the saved checkpoints and lead to unexpected behavior.
+
+Additionally, for Rotowire and WikiTableText, the datasets are very small, so we run experiments with 5 seeds (1, 10, 20, 30, 40) and report the average numbers. Scripts under `scripts/rotowire` and `scripts/wikitabletext` have the seed as the fourth argument.
 
 Rotowire and WikiBio experiments are run on 8 GPUs. E2E and WikiTableText experiments are run on 1 GPU.
 
