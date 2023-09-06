@@ -37,7 +37,7 @@ or
 bash scripts/rotowire/train_had.sh data/rotowire/ bart.base/ checkpoints/rotowire/
 ```
 
-**Note**: for simplicity, the saving directory for all scripts are set to `checkpoints/` by default. However, if you want to run training experiments, remember to change the saving directory argument. Otherwise the experiments may override the saved checkpoints and lead to unexpected behavior.
+**Note**: for simplicity, the saving directory for all scripts are set to `checkpoints/` by default. However, if you want to run multiple training experiments, remember to change the saving directory argument. Otherwise the experiments may override the saved checkpoints and lead to unexpected behavior.
 
 Additionally, for Rotowire and WikiTableText, the datasets are very small, so we run experiments with 5 seeds (1, 10, 20, 30, 40) and report the average numbers. Scripts under `scripts/rotowire` and `scripts/wikitabletext` have the seed as the fourth argument.
 
