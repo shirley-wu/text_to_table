@@ -26,15 +26,15 @@ then you'll have BPE-ed files under `data/rotowire` and binary files under `data
 
 ## Training
 
-For each dataset, use `scripts/dataset-name/train_vanilla.sh` to train a vanilla seq2seq model, and use `scripts/dataset-name/train_vanilla.sh` to train a HAD model. The training scripts have three arguments: the first is the data path (NOTE: it's not the path to the binary files), the second is the bart model path, and the third is the saving directory (optional argument, default is `checkpoints/`). Example use:
+For each dataset, use `scripts/dataset-name/train_vanilla.sh` to train a vanilla seq2seq model, and use `scripts/dataset-name/train_tre.sh` to train a model with table relation embeddings. The training scripts have three arguments: the first is the data path (NOTE: it's not the path to the binary files), the second is the bart model path, and the third is the saving directory (optional argument, default is `checkpoints/`). Example use:
 ```bash
-bash scripts/rotowire/train_had.sh data/rotowire/ bart.base/
+bash scripts/rotowire/train_tre.sh data/rotowire/ bart.base/
 ```
 
 or
 
 ```bash
-bash scripts/rotowire/train_had.sh data/rotowire/ bart.base/ checkpoints/rotowire/
+bash scripts/rotowire/train_tre.sh data/rotowire/ bart.base/ checkpoints/rotowire/
 ```
 
 **Note**: for simplicity, the saving directory for all scripts are set to `checkpoints/` by default. However, if you want to run multiple training experiments, remember to change the saving directory argument. Otherwise the experiments may override the saved checkpoints and lead to unexpected behavior.
